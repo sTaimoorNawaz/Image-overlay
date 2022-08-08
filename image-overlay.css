@@ -1,0 +1,205 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightseagreen;
+}
+
+.title {
+  text-align: center;
+  margin: 0.7em auto;
+}
+
+.box {
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.box .image {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #474747;
+  color: white;
+  padding: 0.3em 1em;
+  margin-top: 0.8rem;
+  transition: all 0.4s ease-in;
+}
+.btn:hover {
+  background: #232323;
+  /* box-shadow: x y blur color; */
+  box-shadow: 5px 5px 20px #474747;
+}
+
+.box-content {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.4s ease-in-out;
+}
+.box:hover .box-content {
+  opacity: 1;
+  left: 50%;
+}
+
+.box::after {
+  content: "Hello";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease-in;
+}
+.box:hover::after {
+  opacity: 1;
+}
+
+.box-content h3 {
+  color: #fff;
+  font-size: 17px;
+}
+
+/* .box{
+  filter: invert(1) hue-rotate(280deg);
+} */
+
+/** Simple Image Overlay Hover Effects */
+/* 8 Boxes */
+.margin {
+  margin: 0.8em;
+  text-align: center;
+}
+
+.titles {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  color: #232323;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.boxs {
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  right: 50%;
+  width: 100%;
+  opacity: 0;
+  z-index: 2;
+  transform: translate(-50%, -60%);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.boxs:hover .content {
+  opacity: 1;
+  bottom: 10%;
+}
+
+.fadintop {
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.boxs:hover .fadintop {
+  top: 50%;
+  bottom: 0%;
+}
+
+.fadinleft {
+  top: 50%;
+  left: 20%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+}
+
+.boxs:hover .fadinleft {
+  left: 50%;
+  bottom: 0;
+}
+
+.fadinright {
+  top: 50%;
+  left: 0;
+  right: 20%;
+  bottom: 0%;
+  transform: translate(50%, -50%);
+}
+
+.boxs:hover .fadinright {
+  left: -50%;
+  right: 50%;
+  bottom: 0;
+}
+
+.content h4,
+small {
+  margin-top: 0.8rem;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+
+/* fade */
+.boxs::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.632);
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  z-index: 1;
+}
+
+.boxs:hover::after {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
